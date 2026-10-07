@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>Алексей Смирнов — психолог и коуч | Тревога, выгорание, отношения</title>
+  <meta name="description" content="Психолог и коуч с опытом 12 лет. Помогаю справиться с тревогой, выгоранием, кризисом отношений и найти опору в себе. Онлайн и в кабинете в Санкт-Петербурге. Первая встреча 15 минут — бесплатно.">
+  <meta name="keywords" content="психолог, коуч, консультация психолога, тревога, панические атаки, выгорание, кризис отношений, самооценка, онлайн-консультация, Санкт-Петербург">
+  <meta name="author" content="Алексей Смирнов">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://example.com/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Алексей Смирнов — психолог и коуч">
+  <meta property="og:description" content="Помогаю справиться с тревогой, выгоранием и кризисом отношений. Онлайн и в кабинете.">
+  <meta property="og:image" content="baner.jpg">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:site_name" content="Алексей Смирнов">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #F5F2EB;
+      --text: #2C3E44;
+      --text-muted: #41656E;
+      --accent: #A3B5A6;
+      --accent-warm: #D9C7BB;
+      --accent-warm-hover: #CBB4A6;
+      --border: rgba(163, 181, 166, 0.3);
+      --card-bg: rgba(255, 255, 245, 0.9);
+      --radius: 32px;
+      --radius-sm: 60px;
+      --shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.06), 0 0 0 1px rgba(163, 181, 166, 0.2);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', 'Manrope', sans-serif;
+      background-color: var(--bg);
+      color: var(--text);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+
+    .service-card, .step-card, .faq-item, .price-card, .review-card {
+      border-radius: var(--radius);
+      background: var(--card-bg);
+      backdrop-filter: blur(2px);
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background-color: var(--accent);
+      color: #1F2E2E;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: var(--radius-sm);
+      text-decoration: none;
+      transition: 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+      font-family: inherit;
+    }
+    .btn-primary {
+      background-color: var(--accent-warm);
+      color: var(--text);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.02);
+    }
+    .btn-primary:hover {
+      background-color: var(--accent-warm-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -5px rgba(0,0,0,0.1);
+    }
+    .btn-outline {
+      background: transparent;
+      border: 1.5px solid var(--accent);
+      color: var(--text);
+    }
+    .btn-outline:hover { background: rgba(163, 181, 166, 0.12); }
+
+    h1, h2, h3 { font-weight: 600; letter-spacing: -0.02em; }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-align: center;
+    }
+    h2 i { font-size: 1.8rem; color: var(--accent); font-weight: 300; }
+
+    .section { padding: 70px 0; position: relative; }
+    .section-1 { background: linear-gradient(135deg, #F5F2EB 0%, #FDF8F2 100%); }
+    .section-2 { background: linear-gradient(135deg, #F0EDE4 0%, #F9F4EC 100%); }
+    .section-3 { background: linear-gradient(135deg, #F5F2EB 0%, #F7F0E8 100%); }
+    .section-4 { background: linear-gradient(135deg, #EAE5DC 0%, #F5EFE7 100%); }
+    .section-5 { background: linear-gradient(135deg, #FDF9F4 0%, #F5F0E8 100%); }
+    .section-6 { background: linear-gradient(135deg, #F2EEE6 0%, #FBF6EF 100%); }
+    .section-7 { background: linear-gradient(135deg, #F5F2EB 0%, #FEFAF5 100%); }
+    .section-8 { background: linear-gradient(135deg, #F0EDE4 0%, #FAF5EF 100%); }
+
+    .section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(circle at 10% 20%, rgba(229,197,180,0.08) 0%, transparent 60%);
+    }
+
+    .fixed-nav {
+      position: fixed;
+      top: 0; left: 0; width: 100%;
+      z-index: 1000;
+      background: rgba(245, 242, 235, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px 0;
+      flex-wrap: wrap;
+    }
+    .logo { font-size: 1.5rem; font-weight: 700; color: var(--text); }
+    .logo span { font-weight: 400; font-size: 0.8rem; display: block; color: #6C828A; }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      transition: color 0.2s;
+      cursor: pointer;
+    }
+    .nav-links a:hover { color: #8B6E5E; }
+
+    main { padding-top: 96px; }
+
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 40px;
+      padding: 20px 0;
+    }
+    .hero-content { flex: 1; min-width: 280px; }
+    .hero-image { flex: 1; text-align: center; min-width: 280px; }
+    .hero-image img {
+      width: 100%;
+      max-width: 380px;
+      border-radius: 48px;
+      object-fit: cover;
+      box-shadow: 0 30px 30px -20px rgba(0,0,0,0.2);
+    }
+    .badge {
+      background: #E5C5B4;
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .grid-3, .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .service-card, .step-card, .price-card {
+      padding: 28px 22px;
+      text-align: center;
+    }
+    .service-card:hover, .step-card:hover, .price-card:hover, .review-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 30px -12px rgba(0,0,0,0.1);
+    }
+    .service-card i, .step-card i, .price-card i { color: var(--accent); }
+    .step-card { text-align: left; }
+
+    .review-card {
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      text-align: left;
+      position: relative;
+    }
+    .review-quote {
+      font-size: 1.8rem;
+      color: var(--accent-warm);
+      opacity: 0.8;
+      line-height: 1;
+    }
+    .review-text {
+      font-size: 1.02rem;
+      line-height: 1.6;
+      color: var(--text);
+      flex-grow: 1;
+    }
+    .review-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+    .review-topic {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+    }
+    .review-author {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    .office-features { margin-top: 24px; display: flex; flex-direction: column; gap: 12px; }
+    .office-features i { width: 28px; color: var(--accent); }
+
+    .faq-item { padding: 0; margin-bottom: 16px; overflow: hidden; }
+    .faq-question {
+      font-weight: 700;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 28px;
+      cursor: pointer;
+      transition: background 0.2s;
+      gap: 16px;
+    }
+    .faq-question:hover { background: rgba(163, 181, 166, 0.08); }
+    .faq-question i.fa-chevron-down { transition: transform 0.3s ease; color: var(--accent); flex-shrink: 0; }
+    .faq-item.active .faq-question i.fa-chevron-down { transform: rotate(180deg); }
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, padding 0.2s;
+      padding: 0 28px;
+      color: #4a5f66;
+      line-height: 1.55;
+    }
+    .faq-item.active .faq-answer { max-height: 320px; padding: 0 28px 20px 28px; }
+
+    .counter { font-size: 2rem; font-weight: 800; color: var(--accent); }
+    .price-card .price { font-size: 1.8rem; font-weight: 700; margin: 10px 0; }
+    .price-card .price-note {
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent);
+      margin-top: -4px;
+      margin-bottom: 8px;
+    }
+
+    .yform-wrap {
+      max-width: 640px;
+      margin: 0 auto;
+      border-radius: var(--radius);
+      overflow: hidden;
+      background: var(--card-bg);
+      box-shadow: var(--shadow);
+      padding: 8px;
+    }
+    .yform-wrap iframe {
+      display: block;
+      width: 100%;
+      min-height: 640px;
+      border: none;
+      border-radius: 24px;
+      background: transparent;
+    }
+
+    .form-note { text-align: center; font-size: 0.8rem; margin-top: 20px; }
+
+    .footer { background: #EBE4DA; text-align: center; padding: 32px 0; font-size: 0.8rem; }
+    .footer a { color: var(--text); text-decoration: none; }
+    .footer a:hover { text-decoration: underline; }
+
+    .trust-sign { display: flex; justify-content: center; gap: 30px; margin: 40px 0 20px; flex-wrap: wrap; }
+    .trust-sign span i { margin-right: 6px; color: var(--accent); }
+
+    .quote-block {
+      background: linear-gradient(125deg, #E5C5B4 0%, #D9B8A8 100%);
+      border-radius: var(--radius);
+      padding: 30px;
+      text-align: center;
+      color: var(--text);
+    }
+
+    .split { display: flex; flex-wrap: wrap; gap: 40px; align-items: center; }
+    .split > div { flex: 1; min-width: 280px; }
+    .split h2 { justify-content: flex-start; text-align: left; }
+    .split ul { margin-top: 20px; list-style: none; display: flex; flex-direction: column; gap: 12px; }
+
+    body.js-ready .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    body.js-ready .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 800px) {
+      .nav-links { gap: 16px; flex-wrap: wrap; justify-content: center; margin-top: 8px; }
+      nav { flex-direction: column; align-items: center; gap: 12px; }
+      .hero { flex-direction: column; text-align: center; }
+      .section { padding: 50px 0; }
+      .logo { text-align: center; }
+      h2 { font-size: 1.6rem; }
+      h2 i { font-size: 1.4rem; }
+      .faq-question { padding: 16px 20px; }
+      .faq-item.active .faq-answer { padding: 0 20px 16px 20px; }
+      .grid-3 { gap: 20px; }
+      .split h2 { justify-content: center; text-align: center; }
+      .review-card { padding: 24px 22px; }
+    }
+
+    @media (max-width: 600px) {
+      .yform-wrap { padding: 4px; }
+      .yform-wrap iframe { min-height: 720px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      html { scroll-behavior: auto; }
+      body.js-ready .reveal { opacity: 1; transform: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="fixed-nav">
+    <div class="container">
+      <nav aria-label="Основная навигация">
+        <div class="logo">Алексей Смирнов <span>психолог · коуч</span></div>
+        <ul class="nav-links">
+          <li><a href="#about" data-target="about">Обо мне</a></li>
+          <li><a href="#services" data-target="services">Запросы</a></li>
+          <li><a href="#method" data-target="method">Метод</a></li>
+          <li><a href="#pricing" data-target="pricing">Стоимость</a></li>
+          <li><a href="#reviews" data-target="reviews">Отзывы</a></li>
+          <li><a href="#contact" data-target="contact">Запись</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="section section-1" id="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero">
+          <div class="hero-content">
+            <div class="badge"><i class="fas fa-shield-alt" aria-hidden="true"></i> Онлайн и в кабинете · Санкт-Петербург</div>
+            <h1 id="hero-title">Помогаю справиться с тревогой, выгоранием и кризисом в отношениях</h1>
+            <p style="font-size: 1.2rem; margin: 20px 0 24px; color: var(--text-muted);">
+              Психолог и коуч с опытом 12 лет. Работаю бережно, без осуждения и «воды». Разберём запрос → составим план → вместе дойдём до результата.
+            </p>
+            <a href="#contact" class="btn btn-primary" data-target="contact">
+              <i class="fas fa-calendar-check" aria-hidden="true"></i> Первая встреча — бесплатно, 15 минут
+            </a>
+            <div class="trust-sign">
+              <span><i class="fas fa-user-group" aria-hidden="true"></i> 400+ клиентов</span>
+              <span><i class="fas fa-hourglass-half" aria-hidden="true"></i> 12 лет практики</span>
+              <span><i class="fas fa-brain" aria-hidden="true"></i> КПТ + коучинг</span>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="coach.jpg" alt="Алексей Смирнов — психолог и коуч" width="380" height="380" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЗАПРОСЫ -->
+    <section class="section section-2" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <h2 id="services-title"><i class="fas fa-feather-alt" aria-hidden="true"></i> С чем ко мне приходят</h2>
+        <div class="grid-3">
+          <article class="service-card reveal">
+            <i class="fas fa-cloud-rain" style="font-size: 2rem;" aria-hidden="true"></i>
+            <h3>Тревога и панические атаки</h3>
+            <p>Учимся распознавать триггеры и возвращать контроль над состоянием без таблеток.</p>
+          </article>
+          <article class="service-card reveal">
+            <i class="fas fa-battery-quarter" style="font-size: 2rem;" aria-hidden="true"></i>
+            <h3>Выгорание и потеря смысла</h3>
+            <p>Возвращаем энергию, интерес к работе и жизни, выстраиваем новые опоры.</p>
+          </article>
+          <article class="service-card reveal">
+            <i class="fas fa-heart-broken" style="font-size: 2rem;" aria-hidden="true"></i>
+            <h3>Кризис в отношениях</h3>
+            <p>Помогаю услышать друг друга, выйти из конфликтов и вернуть близость.</p>
+          </article>
+          <article class="service-card reveal">
+            <i class="fas fa-hand-sparkles" style="font-size: 2rem;" aria-hidden="true"></i>
+            <h3>Самооценка и границы</h3>
+            <p>Учимся говорить «нет», не винить себя и выбирать себя без чувства вины.</p>
+          </article>
+          <article class="service-card reveal">
+            <i class="fas fa-compass" style="font-size: 2rem;" aria-hidden="true"></i>
+            <h3>Поиск себя и целей</h3>
+            <p>Коучинговые техники: от «не знаю, чего хочу» к ясному плану действий.</p>
+          </article>
+          <article class="service-card reveal">
+            <i class="fas fa-user-shield" style="font-size: 2rem;" aria-hidden="true"></i>
+            <h3>Последствия травм и ПТСР</h3>
+            <p>Бережная работа с тяжёлым опытом в безопасном темпе и с супервизией.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ПОДХОД -->
+    <section class="section section-3" aria-labelledby="approach-title">
+      <div class="container">
+        <div class="split">
+          <div class="reveal">
+            <i class="fas fa-user-check" style="font-size: 3.5rem; color: var(--accent-warm-hover);" aria-hidden="true"></i>
+            <h2 id="approach-title" style="margin-top: 16px;">Почему со мной комфортно работать</h2>
+            <ul>
+              <li>✓ <strong>Никакой «терапии ради терапии»</strong> — есть запрос, есть измеримый результат.</li>
+              <li>✓ <strong>КПТ + коучинговые инструменты</strong>: меняем не только состояние, но и мышление.</li>
+              <li>✓ <strong>Мужской взгляд</strong> там, где важно спокойствие, структура и опора.</li>
+              <li>✓ Работаю <strong>индивидуально и с парами</strong>, онлайн и в кабинете.</li>
+              <li>✓ Регулярная <strong>супервизия</strong> — вы в надёжных руках.</li>
+            </ul>
+          </div>
+          <div class="reveal">
+            <div class="quote-block">
+              <i class="fas fa-quote-left" style="font-size: 2rem; opacity: 0.7;" aria-hidden="true"></i>
+              <p style="font-style: italic; margin-top: 16px; font-size: 1.1rem;">
+                «Я не даю советов и не делю жизнь на „правильно“ и „неправильно“. Моя задача — помочь вам услышать себя и найти свой путь».
+              </p>
+              <strong>— Алексей Смирнов</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- МЕТОД -->
+    <section class="section section-4" id="method" aria-labelledby="method-title">
+      <div class="container">
+        <h2 id="method-title"><i class="fas fa-chalkboard-user" aria-hidden="true"></i> Как строится работа</h2>
+        <div class="grid-3">
+          <article class="step-card reveal">
+            <div class="counter">01</div>
+            <i class="fas fa-stethoscope" style="font-size: 1.6rem; margin-bottom: 12px; display: inline-block;" aria-hidden="true"></i>
+            <h3>Первая встреча · 15 мин · бесплатно</h3>
+            <p>Коротко о запросе, отвечу на вопросы, предложу формат и первые шаги.</p>
+          </article>
+          <article class="step-card reveal">
+            <div class="counter">02</div>
+            <i class="fas fa-drafting-compass" style="font-size: 1.6rem; margin-bottom: 12px; display: inline-block;" aria-hidden="true"></i>
+            <h3>Диагностическая сессия · 60 мин</h3>
+            <p>Разбираем корень запроса, формулируем цель и критерии результата.</p>
+          </article>
+          <article class="step-card reveal">
+            <div class="counter">03</div>
+            <i class="fas fa-seedling" style="font-size: 1.6rem; margin-bottom: 12px; display: inline-block;" aria-hidden="true"></i>
+            <h3>Регулярные сессии · 4–12 встреч</h3>
+            <p>Индивидуально или парно, онлайн или в кабинете. С домашними практиками.</p>
+          </article>
+        </div>
+        <p style="text-align: center; margin-top: 32px; color: var(--text-muted);">
+          <i class="fas fa-laptop-house" aria-hidden="true"></i> Онлайн-сессии — Zoom, Google Meet или WhatsApp
+        </p>
+      </div>
+    </section>
+
+    <!-- КАБИНЕТ -->
+    <section class="section section-8" id="office" aria-labelledby="office-title">
+      <div class="container">
+        <div class="split">
+          <div class="reveal" style="text-align: center;">
+            <img src="room.jpg" alt="Уютный кабинет психолога" width="420" height="300" loading="lazy"
+                 style="border-radius: 48px; width: 100%; max-width: 420px; box-shadow: 0 20px 30px -12px rgba(0,0,0,0.15);">
+          </div>
+          <div class="reveal">
+            <h2 id="office-title" style="justify-content: flex-start;"><i class="fas fa-home" aria-hidden="true"></i> Пространство для доверия</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 16px; color: var(--text-muted);">
+              Приём веду в уютном кабинете и онлайн — в любом формате вы почувствуете безопасность.
+            </p>
+            <p>Мягкий свет, удобные кресла, чай и никакой казённой обстановки. Здесь можно расслабиться, говорить о сложном и не бояться осуждения.</p>
+            <div class="office-features">
+              <div><i class="fas fa-leaf" aria-hidden="true"></i> Тихий центр, без лишних глаз</div>
+              <div><i class="fas fa-volume-low" aria-hidden="true"></i> Звукоизоляция — конфиденциальность</div>
+              <div><i class="fas fa-coffee" aria-hidden="true"></i> Чай и комфортная зона ожидания</div>
+              <div><i class="fas fa-wifi" aria-hidden="true"></i> Стабильный онлайн-формат из любой точки</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ЦЕНЫ -->
+    <section class="section section-5" id="pricing" aria-labelledby="pricing-title">
+      <div class="container">
+        <h2 id="pricing-title"><i class="fas fa-tag" aria-hidden="true"></i> Прозрачные цены</h2>
+        <div class="grid-3">
+          <article class="price-card reveal">
+            <i class="fas fa-hand-peace" style="font-size: 2rem;" aria-hidden="true"></i>
+            <h3>Первая встреча</h3>
+            <div class="price">0 ₽</div>
+            <p class="price-note">Бесплатно · 15 минут</p>
+            <p>онлайн или в кабинете · без обязательств</p>
+          </article>
+          <article class="price-card reveal">
+            <i class="fas fa-clipboard-list" style="font-size: 2rem;" aria-hidden="true"></i>
+            <h3>Индивидуальная сессия</h3>
+            <div class="price">4 500 ₽</div>
+            <p>60 минут · онлайн или офлайн</p>
+          </article>
+          <article class="price-card reveal">
+            <i class="fas fa-users" style="font-size: 2rem;" aria-hidden="true"></i>
+            <h3>Парная сессия</h3>
+            <div class="price">6 500 ₽</div>
+            <p>80 минут · для пар и супругов</p>
+          </article>
+          <article class="price-card reveal">
+            <i class="fas fa-gem" style="font-size: 2rem;" aria-hidden="true"></i>
+            <h3>Пакет 5 сессий</h3>
+            <div class="price">20 000 ₽</div>
+            <p>экономия 2 500 ₽ · для глубокой работы</p>
+          </article>
+        </div>
+        <div style="text-align: center; margin-top: 28px;">
+          <span class="badge"><i class="fas fa-gift" aria-hidden="true"></i> Первая встреча — бесплатно. Диагностическая сессия — со скидкой 20% для новых клиентов</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОБО МНЕ -->
+    <section class="section section-6" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="split">
+          <div class="reveal" style="text-align: center;">
+            <img src="coach.jpg" alt="Алексей Смирнов" width="300" height="300" loading="lazy"
+                 style="border-radius: 48px; width: 100%; max-width: 300px; box-shadow: 0 12px 24px -8px rgba(0,0,0,0.1);">
+          </div>
+          <div class="reveal">
+            <h2 id="about-title" style="justify-content: flex-start;"><i class="fas fa-user-astronaut" aria-hidden="true"></i> Обо мне</h2>
+            <p>Меня зовут Алексей Смирнов. Я практикующий психолог и коуч. Образование: МГППУ, клиническая психология; сертификаты по КПТ, коучингу (ICF), работе с травмой и парной терапии. Опыт — более 12 лет, регулярная супервизия.</p>
+            <p style="margin-top: 12px;">Помогаю справляться с тревогой, выгоранием, кризисами отношений и находить опору в себе. Без давления, оценок и «правильных ответов».</p>
+            <p style="margin-top: 12px;"><i class="fas fa-certificate" aria-hidden="true"></i> Сертификаты и дипломы — по запросу.</p>
+            <a href="#contact" class="btn btn-primary" data-target="contact" style="margin-top: 20px;">
+              <i class="fas fa-calendar-check" aria-hidden="true"></i> Записаться на первую встречу
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ОТЗЫВЫ -->
+    <section class="section section-3" id="reviews" aria-labelledby="reviews-title">
+      <div class="container">
+        <h2 id="reviews-title"><i class="fas fa-message" aria-hidden="true"></i> Клиенты доверяют</h2>
+        <div class="grid-3">
+
+          <article class="review-card reveal">
+            <i class="fas fa-quote-left review-quote" aria-hidden="true"></i>
+            <p class="review-text">
+              «Пришла с постоянной тревогой и бессонницей. За 8 сессий научилась распознавать триггеры
+              и возвращать себя в спокойствие. Алексей — бережный и структурный специалист».
+            </p>
+            <div class="review-meta">
+              <span class="review-topic">Тревога · 8 сессий</span>
+              <span class="review-author">Елена, 34 года</span>
+            </div>
+          </article>
+
+          <article class="review-card reveal">
+            <i class="fas fa-quote-left review-quote" aria-hidden="true"></i>
+            <p class="review-text">
+              «Выгорел на работе до полного безразличия. С Алексеем разобрали, куда уходит энергия,
+              и построили новый график. Через 2 месяца снова чувствую вкус к жизни».
+            </p>
+            <div class="review-meta">
+              <span class="review-topic">Выгорание · 6 сессий</span>
+              <span class="review-author">Дмитрий, 41 год</span>
+            </div>
+          </article>
+
+          <article class="review-card reveal">
+            <i class="fas fa-quote-left review-quote" aria-hidden="true"></i>
+            <p class="review-text">
+              «Были на грани развода. Парные сессии помогли услышать друг друга без обвинений.
+              Мы снова вместе — и это не „терпение“, а настоящее желание быть рядом».
+            </p>
+            <div class="review-meta">
+              <span class="review-topic">Парная терапия · 10 сессий</span>
+              <span class="review-author">Анна и Сергей, 38 и 42</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-4" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title"><i class="fas fa-circle-question" aria-hidden="true"></i> Частые вопросы</h2>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Чем психолог отличается от коуча? Что выбрать?</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </div>
+          <div class="faq-answer">
+            Психолог работает с состоянием и прошлым опытом: тревога, травмы, отношения. Коуч — с целями и будущим: «куда и как». Я совмещаю оба подхода: сначала стабилизируем состояние, потом строим план. На первой встрече подскажу, что подойдёт именно вам.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Сколько встреч понадобится?</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </div>
+          <div class="faq-answer">
+            Зависит от запроса. Краткосрочная работа — 4–8 сессий, глубинная — от 10. На диагностической встрече я скажу примерный план и критерии, по которым мы поймём, что цель достигнута.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Вы работаете онлайн? Это эффективно?</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </div>
+          <div class="faq-answer">
+            Да. Онлайн-формат ничуть не уступает офлайн: вы в привычной обстановке, экономите время на дорогу. Главное — тихое место и стабильный интернет. Для парных сессий тоже подходит.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Всё останется между нами?</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </div>
+          <div class="faq-answer">
+            Да. Конфиденциальность — основа работы. Я не передаю информацию третьим лицам, не публикую кейсы без письменного согласия и не обсуждаю клиентов вне сессий (кроме супервизии — там данные обезличены).
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question" role="button" tabindex="0" aria-expanded="false">
+            <span>Что входит в бесплатную первую встречу?</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </div>
+          <div class="faq-answer">
+            Первая встреча — это 15 минут бесплатно. Коротко расскажете о ситуации, я задам уточняющие вопросы, предложу формат и первые шаги. Вы поймёте, комфортно ли вам со мной, и примете решение без давления и обязательств.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ФОРМА (Яндекс.Формы через iframe) -->
+    <section class="section section-7" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <h2 id="contact-title"><i class="fas fa-calendar-alt" aria-hidden="true"></i> Запись на консультацию</h2>
+        <p style="text-align: center; max-width: 600px; margin: 0 auto 32px;">
+          Оставьте заявку — я свяжусь в течение часа и предложу удобные варианты. Первая встреча — <strong>бесплатно, 15 минут</strong>. Плюс отправлю гайд «5 техник против тревоги».
+        </p>
+
+        <div class="yform-wrap">
+          <iframe
+            src="https://forms.yandex.ru/u/6ac648f55056904352c90152?iframe=1"
+            frameborder="0"
+            name="ya-form-6ac648f55056904352c90152"
+            width="100%"
+            loading="lazy"
+            allow="clipboard-write"
+            title="Форма записи на консультацию">
+          </iframe>
+        </div>
+
+        <p class="form-note">После отправки гайд придёт на указанный email</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>ИП Смирнов А.В. | ОГРНИП 1234567890123 | <a href="#">Политика конфиденциальности</a></p>
+      <p style="margin-top: 8px;">
+        <i class="fas fa-phone-alt" aria-hidden="true"></i> <a href="tel:+79991234567">+7 (999) 123-45-67</a> |
+        <i class="fas fa-envelope" aria-hidden="true"></i> <a href="mailto:hello@example.com">hello@example.com</a> |
+        Санкт-Петербург, м. Петроградская
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://forms.yandex.ru/_static/embed.js"></script>
+
+  <script>
+    (function () {
+      'use strict';
+
+      document.body.classList.add('js-ready');
+
+      try {
+        function smoothScrollToElement(elementId) {
+          var target = document.getElementById(elementId);
+          if (!target) return;
+          var nav = document.querySelector('.fixed-nav');
+          var navH = nav ? nav.offsetHeight : 80;
+          var top = target.getBoundingClientRect().top + window.pageYOffset - navH - 20;
+          window.scrollTo({ top: top, behavior: 'smooth' });
+        }
+
+        document.addEventListener('click', function (e) {
+          var link = e.target.closest('a[data-target], a[href^="#"]');
+          if (!link) return;
+          var id = link.getAttribute('data-target') ||
+                   (link.getAttribute('href') || '').replace('#', '');
+          if (!id) return;
+          if (document.getElementById(id)) {
+            e.preventDefault();
+            smoothScrollToElement(id);
+          }
+        });
+
+        document.querySelectorAll('.faq-item').forEach(function (item) {
+          var q = item.querySelector('.faq-question');
+          if (!q) return;
+          var toggle = function () {
+            var isOpen = item.classList.toggle('active');
+            q.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+          };
+          q.addEventListener('click', toggle);
+          q.addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              toggle();
+            }
+          });
+        });
+
+        var revealEls = document.querySelectorAll('.reveal');
+        if ('IntersectionObserver' in window) {
+          var observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+              if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+              }
+            });
+          }, { threshold: 0.12 });
+
+          revealEls.forEach(function (el) { observer.observe(el); });
+
+          setTimeout(function () {
+            revealEls.forEach(function (el) { el.classList.add('visible'); });
+          }, 1500);
+        } else {
+          revealEls.forEach(function (el) { el.classList.add('visible'); });
+        }
+      } catch (err) {
+        console.error('Init error:', err);
+        document.querySelectorAll('.reveal').forEach(function (el) {
+          el.classList.add('visible');
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
